@@ -205,7 +205,7 @@ class CreateTheme extends GeneratorCommand
 
             // Handle commands throwing errors
             if ($this->call($command, $data['args']) !== 0) {
-                throw new SystemException(sprintf('Post create command `%s` failed, please review manually.', $command));
+                throw new SystemException(sprintf('PostList create command `%s` failed, please review manually.', $command));
             }
 
             // Force PackageManger to reset available packages

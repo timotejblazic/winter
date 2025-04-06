@@ -29,7 +29,7 @@ class ControllerTest extends TestCase
         View::clearVarCache();
 
         include_once base_path() . '/modules/system/tests/fixtures/plugins/winter/tester/components/Archive.php';
-        include_once base_path() . '/modules/system/tests/fixtures/plugins/winter/tester/components/Post.php';
+        include_once base_path() . '/modules/system/tests/fixtures/plugins/winter/tester/components/PostList.php';
         include_once base_path() . '/modules/system/tests/fixtures/plugins/winter/tester/components/MainMenu.php';
         include_once base_path() . '/modules/system/tests/fixtures/plugins/winter/tester/components/ContentBlock.php';
         include_once base_path() . '/modules/system/tests/fixtures/plugins/winter/tester/components/Comments.php';
@@ -440,9 +440,9 @@ class ControllerTest extends TestCase
         $content = <<<ESC
 <div>LAYOUT CONTENT<p>This page uses components.</p>
     <h3>Lorum ipsum</h3>
-    <p>Post Content #1</p>
+    <p>PostList Content #1</p>
     <h3>La Playa Nudista</h3>
-    <p>Second Post Content</p>
+    <p>Second PostList Content</p>
 </div>
 ESC;
 
@@ -470,9 +470,9 @@ ESC;
         $content = <<<ESC
 <div>LAYOUT CONTENT<p>This page uses components.</p>
     <h3>Lorum ipsum</h3>
-    <p>Post Content #1</p>
+    <p>PostList Content #1</p>
     <h3>La Playa Nudista</h3>
-    <p>Second Post Content</p>
+    <p>Second PostList Content</p>
 </div>
 ESC;
 
@@ -531,9 +531,9 @@ ESC;
         $content = <<<ESC
 <div>LAYOUT CONTENT<p>This page uses components.</p>
     <h3>Lorum ipsum</h3>
-    <p>Post Content #1</p>
+    <p>PostList Content #1</p>
     <h3>La Playa Nudista</h3>
-    <p>Second Post Content</p>
+    <p>Second PostList Content</p>
 </div>
 ESC;
 
@@ -557,9 +557,9 @@ ESC;
         $content = <<<ESC
 <div>LAYOUT CONTENT<p>This page uses components.</p>
     <h3>Lorum ipsum</h3>
-    <p>Post Content #1</p>
+    <p>PostList Content #1</p>
     <h3>La Playa Nudista</h3>
-    <p>Second Post Content</p>
+    <p>Second PostList Content</p>
 </div>
 ESC;
 

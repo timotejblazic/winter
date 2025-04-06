@@ -1,0 +1,12 @@
+<div class="container">
+    {% if post %}
+        <article>
+            <h1>{{ post.title }}</h1>
+            <div>{{ post.category.name }}</div>
+            <p>{{ post.content | raw }}</p>
+            <small>Published on {{ post.created_at | date('M d, Y') }}</small>
+        </article>
+    {% else %}
+        <h1>Post not found.</h1>
+    {% endif %}
+</div>

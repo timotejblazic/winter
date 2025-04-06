@@ -12,7 +12,7 @@ No matter how large or small your project is, Winter provides a rich development
 [![Discord](https://img.shields.io/badge/discord-join-purple?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/D5MFSPH6Ux)
 
 ## Current admin password
-bc7etvpCe9DK5UdaVLAfoF
+PDgLalrp8omTth1CItBKnS
 
 ## Installing Winter
 

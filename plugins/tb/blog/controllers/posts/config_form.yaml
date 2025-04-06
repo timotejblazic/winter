@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'tb.blog::lang.models.post.label'
+
+# Model Form Field configuration
+form: $/tb/blog/models/post/fields.yaml
+
+# Model Class name
+modelClass: Tb\Blog\Models\Post
+
+# Default redirect location
+defaultRedirect: tb/blog/posts
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: tb/blog/posts/update/:id
+    redirectClose: tb/blog/posts
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: tb/blog/posts
+    redirectClose: tb/blog/posts
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

@@ -16,7 +16,7 @@ class MorphOneModelTest extends PluginTestCase
 
         include_once base_path() . '/modules/system/tests/fixtures/plugins/database/tester/models/Author.php';
         include_once base_path() . '/modules/system/tests/fixtures/plugins/database/tester/models/Phone.php';
-        include_once base_path() . '/modules/system/tests/fixtures/plugins/database/tester/models/Post.php';
+        include_once base_path() . '/modules/system/tests/fixtures/plugins/database/tester/models/PostList.php';
         include_once base_path() . '/modules/system/tests/fixtures/plugins/database/tester/models/Meta.php';
 
         $this->runPluginRefreshCommand('Database.Tester');

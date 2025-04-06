@@ -17,7 +17,7 @@ class MorphManyModelTest extends PluginTestCase
         parent::setUp();
 
         include_once base_path() . '/modules/system/tests/fixtures/plugins/database/tester/models/Author.php';
-        include_once base_path() . '/modules/system/tests/fixtures/plugins/database/tester/models/Post.php';
+        include_once base_path() . '/modules/system/tests/fixtures/plugins/database/tester/models/PostList.php';
         include_once base_path() . '/modules/system/tests/fixtures/plugins/database/tester/models/EventLog.php';
         include_once base_path() . '/modules/system/tests/fixtures/plugins/database/tester/models/Tag.php';
 

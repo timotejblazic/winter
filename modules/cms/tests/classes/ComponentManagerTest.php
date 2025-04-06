@@ -17,7 +17,7 @@ class ComponentManagerTest extends TestCase
         parent::setUp();
 
         include_once base_path() . '/modules/system/tests/fixtures/plugins/winter/tester/components/Archive.php';
-        include_once base_path() . '/modules/system/tests/fixtures/plugins/winter/tester/components/Post.php';
+        include_once base_path() . '/modules/system/tests/fixtures/plugins/winter/tester/components/PostList.php';
         include_once base_path() . '/modules/system/tests/fixtures/plugins/winter/tester/components/MainMenu.php';
         include_once base_path() . '/modules/system/tests/fixtures/plugins/winter/tester/components/ContentBlock.php';
         include_once base_path() . '/modules/system/tests/fixtures/plugins/winter/tester/components/Comments.php';
@@ -48,7 +48,7 @@ class ComponentManagerTest extends TestCase
         $this->assertArrayHasKey('testPost', $components);
         $this->assertArrayHasKey('name', $components['testPost']);
         $this->assertArrayHasKey('description', $components['testPost']);
-        $this->assertEquals('Blog Post Dummy Component', $components['testPost']['name']);
+        $this->assertEquals('Blog PostList Dummy Component', $components['testPost']['name']);
         $this->assertEquals('Displays a blog post.', $components['testPost']['description']);
     }
 

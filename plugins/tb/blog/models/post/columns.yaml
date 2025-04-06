@@ -1,0 +1,38 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: 'tb.blog::lang.models.general.id'
+        searchable: true
+    title:
+        label: 'Title'
+        type: text
+        searchable: true
+    slug:
+        label: 'Slug'
+        type: text
+        searchable: true
+    content:
+        label: 'Content'
+        type: text
+        searchable: true
+    category[name]:
+        label: Category
+        type: text
+        searchable: true
+    published_at:
+        label: 'Published at'
+        type: text
+    created_at:
+        label: 'tb.blog::lang.models.general.created_at'
+        type: datetime
+        searchable: true
+        sortable: true
+        invisible: true
+    updated_at:
+        label: 'tb.blog::lang.models.general.updated_at'
+        type: datetime
+        searchable: true
+        sortable: true

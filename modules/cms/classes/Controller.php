@@ -220,7 +220,7 @@ class Controller
         $result = $this->runPage($page);
 
         /*
-         * Post-processing
+         * PostList-processing
          */
         $result = $this->postProcessResult($page, $url, $result);
 
@@ -554,7 +554,7 @@ class Controller
     }
 
     /**
-     * Post-processes page HTML code before it's sent to the client.
+     * PostList-processes page HTML code before it's sent to the client.
      * Note for pre-processing see cms.template.processTwigContent event.
      * @param \Cms\Classes\Page $page Specifies the current CMS page.
      * @param string $url Specifies the current URL.

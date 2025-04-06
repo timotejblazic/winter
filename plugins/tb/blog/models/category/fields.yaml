@@ -1,0 +1,15 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        type: text
+    slug:
+        label: Slug
+        type: text
+        preset:
+            field: name
+            type: slug
+

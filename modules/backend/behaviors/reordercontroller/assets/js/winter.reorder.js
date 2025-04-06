@@ -2,8 +2,8 @@
  * Scripts for the Reorder controller behavior.
  *
  * The following functions are observed:
- * - Simple sorting: Post back the original sort orders and the new ordered identifiers.
- * - Nested sorting: Post back source and target nodes IDs and the move positioning.
+ * - Simple sorting: PostList back the original sort orders and the new ordered identifiers.
+ * - Nested sorting: PostList back source and target nodes IDs and the move positioning.
  */
 +function ($) { "use strict";
 
