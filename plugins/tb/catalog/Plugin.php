@@ -1,0 +1,95 @@
+<?php
+
+namespace Tb\Catalog;
+
+use Backend;
+use Backend\Models\UserRole;
+use System\Classes\PluginBase;
+
+/**
+ * Catalog Plugin Information File
+ */
+class Plugin extends PluginBase
+{
+    /**
+     * Returns information about this plugin.
+     */
+    public function pluginDetails(): array
+    {
+        return [
+            'name'        => 'tb.catalog::lang.plugin.name',
+            'description' => 'tb.catalog::lang.plugin.description',
+            'author'      => 'Tb',
+            'icon'        => 'icon-leaf'
+        ];
+    }
+
+    /**
+     * Register method, called when the plugin is first registered.
+     */
+    public function register(): void
+    {
+
+    }
+
+    /**
+     * Boot method, called right before the request route.
+     */
+    public function boot(): void
+    {
+
+    }
+
+    /**
+     * Registers any frontend components implemented in this plugin.
+     */
+    public function registerComponents(): array
+    {
+        return []; // Remove this line to activate
+
+        return [
+            \Tb\Catalog\Components\MyComponent::class => 'myComponent',
+        ];
+    }
+
+    /**
+     * Registers any backend permissions used by this plugin.
+     */
+    public function registerPermissions(): array
+    {
+        return []; // Remove this line to activate
+
+        return [
+            'tb.catalog.some_permission' => [
+                'tab' => 'tb.catalog::lang.plugin.name',
+                'label' => 'tb.catalog::lang.permissions.some_permission',
+                'roles' => [UserRole::CODE_DEVELOPER, UserRole::CODE_PUBLISHER],
+            ],
+        ];
+    }
+
+    /**
+     * Registers backend navigation items for this plugin.
+     */
+    public function registerNavigation(): array
+    {
+        return [
+            'catalog' => [
+                'label'       => 'tb.catalog::lang.plugin.name',
+                'url'         => Backend::url('tb/catalog/products'),
+                'icon'        => 'icon-cubes',
+                'permissions' => ['tb.catalog.*'],
+                'order'       => 500,
+                'sideMenu' => [
+                    'posts' => [
+                        'label'       => 'tb.catalog::lang.menu_item.products',
+                        'url'         => Backend::url('tb/catalog/products'),
+                        'icon'        => 'icon-cubes',
+                        'permissions' => ['tb.catalog.*'],
+                        'order'       => 500,
+                    ],
+                ]
+            ],
+        ];
+    }
+}

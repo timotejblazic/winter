@@ -1,0 +1,27 @@
+fields:
+    title:
+        label: 'tb.catalog::lang.models.general.title'
+        type: text
+        span: auto
+    slug:
+        label: 'tb.catalog::lang.models.general.slug'
+        type: text
+        span: auto
+        preset:
+            field: title
+            type: slug
+    base_price:
+        label: 'tb.catalog::lang.models.product.base_price'
+        type: number
+        span: auto
+    pictures:
+        label: 'tb.catalog::lang.models.general.pictures'
+        span: auto
+        type: mediafinder
+        mode: image
+        prompt: 'Select an image'
+        imageWidth: 60
+        imageHeight: 60
+    description:
+        label: 'tb.catalog::lang.models.general.description'
+        type: richeditor
