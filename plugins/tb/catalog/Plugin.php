@@ -1,19 +1,11 @@
-<?php
-
-namespace Tb\Catalog;
+<?php namespace Tb\Catalog;
 
 use Backend;
 use Backend\Models\UserRole;
 use System\Classes\PluginBase;
 
-/**
- * Catalog Plugin Information File
- */
 class Plugin extends PluginBase
 {
-    /**
-     * Returns information about this plugin.
-     */
     public function pluginDetails(): array
     {
         return [
@@ -29,7 +21,6 @@ class Plugin extends PluginBase
      */
     public function register(): void
     {
-
     }
 
     /**
@@ -37,12 +28,8 @@ class Plugin extends PluginBase
      */
     public function boot(): void
     {
-
     }
 
-    /**
-     * Registers any frontend components implemented in this plugin.
-     */
     public function registerComponents(): array
     {
         return []; // Remove this line to activate
@@ -52,25 +39,19 @@ class Plugin extends PluginBase
         ];
     }
 
-    /**
-     * Registers any backend permissions used by this plugin.
-     */
     public function registerPermissions(): array
     {
         return []; // Remove this line to activate
 
         return [
             'tb.catalog.some_permission' => [
-                'tab' => 'tb.catalog::lang.plugin.name',
+                'tab'   => 'tb.catalog::lang.plugin.name',
                 'label' => 'tb.catalog::lang.permissions.some_permission',
                 'roles' => [UserRole::CODE_DEVELOPER, UserRole::CODE_PUBLISHER],
             ],
         ];
     }
 
-    /**
-     * Registers backend navigation items for this plugin.
-     */
     public function registerNavigation(): array
     {
         return [
@@ -80,7 +61,7 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-cubes',
                 'permissions' => ['tb.catalog.*'],
                 'order'       => 500,
-                'sideMenu' => [
+                'sideMenu'    => [
                     'posts' => [
                         'label'       => 'tb.catalog::lang.menu_item.products',
                         'url'         => Backend::url('tb/catalog/products'),

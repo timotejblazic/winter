@@ -1,31 +1,14 @@
-# ===================================
-#  Form Behavior Config
-# ===================================
-
-# Record name
 name: 'tb.catalog::lang.models.product.label'
-
-# Model Form Field configuration
 form: $/tb/catalog/models/product/fields.yaml
-
-# Model Class name
 modelClass: Tb\Catalog\Models\Product
-
-# Default redirect location
 defaultRedirect: tb/catalog/products
-
-# Create page
 create:
     title: backend::lang.form.create_title
     redirect: tb/catalog/products/update/:id
     redirectClose: tb/catalog/products
-
-# Update page
 update:
     title: backend::lang.form.update_title
     redirect: tb/catalog/products
     redirectClose: tb/catalog/products
-
-# Preview page
 preview:
     title: backend::lang.form.preview_title

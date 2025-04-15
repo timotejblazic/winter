@@ -14,7 +14,7 @@ class Product extends Model
 
     public $rules = [
         'title' => 'required',
-        'slug' => 'required|unique:tb_catalog_products,slug',
+        'slug'  => 'required|unique:tb_catalog_products,slug',
     ];
 
     protected $dates = [
@@ -22,15 +22,7 @@ class Product extends Model
         'updated_at',
     ];
 
-    public $hasOne = [];
-    public $hasMany = [];
-    public $hasOneThrough = [];
-    public $hasManyThrough = [];
-    public $belongsTo = [];
-    public $belongsToMany = [];
-    public $morphTo = [];
-    public $morphOne = [];
-    public $morphMany = [];
-    public $attachOne = [];
-    public $attachMany = [];
+    public $hasMany = [
+        'variants' => [ProductVariant::class],
+    ];
 }

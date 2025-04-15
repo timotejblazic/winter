@@ -22,11 +22,15 @@ return [
         'product' => [
             'label' => 'Product',
             'label_plural' => 'Products',
-            'base_price' => 'Base price'
+            'base_price' => 'Base price',
         ],
+        'product_variant' => [
+            'label' => 'Product variant',
+            'label_plural' => 'Product variants',
+        ]
     ],
     'menu_item' => [
         'catalog' => 'Catalog',
         'products' => 'Products',
-    ]
+    ],
 ];
