@@ -14,9 +14,14 @@ fields:
         label: 'tb.catalog::lang.models.product.base_price'
         type: number
         span: auto
+    brand:
+        label: 'tb.catalog::lang.models.brand.label'
+        span: auto
+        type: relation
+        nameFrom: title
+        emptyOption: '-'
     pictures:
         label: 'tb.catalog::lang.models.general.pictures'
-        span: auto
         type: mediafinder
         mode: image
         prompt: 'Select an image'

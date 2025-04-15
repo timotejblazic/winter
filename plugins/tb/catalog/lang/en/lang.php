@@ -27,10 +27,10 @@ return [
         'product_variant' => [
             'label' => 'Product variant',
             'label_plural' => 'Product variants',
-        ]
-    ],
-    'menu_item' => [
-        'catalog' => 'Catalog',
-        'products' => 'Products',
+        ],
+        'brand' => [
+            'label' => 'Brand',
+            'label_plural' => 'Brands',
+        ],
     ],
 ];

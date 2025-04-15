@@ -5,27 +5,21 @@ columns:
     title:
         label: 'tb.catalog::lang.models.general.title'
         searchable: true
+        sortable: true
     slug:
         label: 'tb.catalog::lang.models.general.slug'
         searchable: true
+        sortable: true
     description:
         label: 'tb.catalog::lang.models.general.description'
         searchable: true
-    base_price:
-        label: 'tb.catalog::lang.models.product.base_price'
-        sortable: true
-    pictures:
-        label: 'tb.catalog::lang.models.general.pictures'
-        type: image
-    brand:
-        label: 'tb.catalog::lang.models.brand.label'
-        relation: brand
-        select: title
+        sortable: false
     created_at:
         label: 'tb.catalog::lang.models.general.created_at'
         type: datetime
         searchable: true
         sortable: true
+        invisible: true
     updated_at:
         label: 'tb.catalog::lang.models.general.updated_at'
         type: datetime

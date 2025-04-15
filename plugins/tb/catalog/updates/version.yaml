@@ -6,3 +6,6 @@
 1.0.2:
     - 'Create ProductVariants Table'
     - v1.0.2/create_product_variants_table.php
+1.0.3:
+    - 'Create Brands Table'
+    - v1.0.3/create_brands_table.php

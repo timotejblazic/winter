@@ -62,13 +62,20 @@ class Plugin extends PluginBase
                 'permissions' => ['tb.catalog.*'],
                 'order'       => 500,
                 'sideMenu'    => [
-                    'posts' => [
-                        'label'       => 'tb.catalog::lang.menu_item.products',
+                    'products' => [
+                        'label'       => 'tb.catalog::lang.models.product.label_plural',
                         'url'         => Backend::url('tb/catalog/products'),
                         'icon'        => 'icon-cubes',
                         'permissions' => ['tb.catalog.*'],
                         'order'       => 500,
                     ],
+                    'brands' => [
+                        'label'       => 'tb.catalog::lang.models.brand.label_plural',
+                        'url'         => Backend::url('tb/catalog/brands'),
+                        'icon'        => 'icon-cubes',
+                        'permissions' => ['tb.catalog.*'],
+                        'order'       => 600,
+                    ]
                 ]
             ],
         ];

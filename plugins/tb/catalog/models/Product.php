@@ -25,4 +25,8 @@ class Product extends Model
     public $hasMany = [
         'variants' => [ProductVariant::class],
     ];
+
+    public $belongsTo = [
+        'brand' => [Brand::class],
+    ];
 }
