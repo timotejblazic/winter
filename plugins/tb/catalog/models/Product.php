@@ -29,4 +29,11 @@ class Product extends Model
     public $belongsTo = [
         'brand' => [Brand::class],
     ];
+
+    public $belongsToMany = [
+        'categories' => [
+            Category::class,
+            'table' => 'tb_catalog_product_categories',
+        ],
+    ];
 }

@@ -72,9 +72,16 @@ class Plugin extends PluginBase
                     'brands' => [
                         'label'       => 'tb.catalog::lang.models.brand.label_plural',
                         'url'         => Backend::url('tb/catalog/brands'),
-                        'icon'        => 'icon-cubes',
+                        'icon'        => 'icon-copyright',
                         'permissions' => ['tb.catalog.*'],
                         'order'       => 600,
+                    ],
+                    'categories' => [
+                        'label'       => 'tb.catalog::lang.models.category.label_plural',
+                        'url'         => Backend::url('tb/catalog/categories'),
+                        'icon'        => 'icon-sitemap',
+                        'permissions' => ['tb.catalog.*'],
+                        'order'       => 700,
                     ]
                 ]
             ],

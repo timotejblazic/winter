@@ -18,6 +18,7 @@ return [
             'picture' => 'Picture',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
+            'actions' => 'Actions',
         ],
         'product' => [
             'label' => 'Product',
@@ -31,6 +32,11 @@ return [
         'brand' => [
             'label' => 'Brand',
             'label_plural' => 'Brands',
+        ],
+        'category' => [
+            'label' => 'Category',
+            'label_plural' => 'Categories',
+            'add_subcategory' => 'Add subcategory',
         ],
     ],
 ];
