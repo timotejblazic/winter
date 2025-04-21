@@ -28,6 +28,12 @@
         "discord": "https://discord.gg/D5MFSPH6Ux",
         "source": "https://github.com/wintercms/winter"
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:timotejblazic/wn-catalog-plugin.git"
+        }
+    ],
     "require": {
         "php": "^8.0.2",
         "winter/storm": "~1.2.0",
@@ -35,7 +41,9 @@
         "winter/wn-backend-module": "~1.2.0",
         "winter/wn-cms-module": "~1.2.0",
         "laravel/framework": "^9.1",
-        "wikimedia/composer-merge-plugin": "~2.1.0"
+        "wikimedia/composer-merge-plugin": "~2.1.0",
+
+        "tb/catalog": "dev-main"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5.8",
