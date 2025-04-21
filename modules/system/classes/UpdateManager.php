@@ -1033,7 +1033,7 @@ class UpdateManager
     /**
      * Modifies the Network HTTP object with common attributes.
      * @param Http $http Network object
-     * @param array $postData PostList data
+     * @param array $postData Post data
      * @return void
      */
     protected function applyHttpAttributes($http, $postData)

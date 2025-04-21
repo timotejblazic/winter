@@ -314,7 +314,7 @@ class ImageResizer
              *          // Get the resized image data
              *          $resizedImageContents = file_get_contents($localTempPath);
              *
-             *          // PostList process the image
+             *          // Post process the image
              *          $processedContents = TinyPNG::optimize($resizedImageContents);
              *
              *          // Place the processed image in the correct location for the resizer to finish processing it
@@ -400,7 +400,7 @@ class ImageResizer
              *          // Get the resized image data
              *          $croppedImageContents = file_get_contents($localTempPath);
              *
-             *          // PostList process the image
+             *          // Post process the image
              *          $processedContents = TinyPNG::optimize($croppedImageContents);
              *
              *          // Place the processed image in the correct location for the resizer to finish processing it

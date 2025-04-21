@@ -5,7 +5,7 @@ use Winter\Storm\Parse\Processor\YamlProcessor;
 /**
  * "version.yaml" pre-processor class.
  *
- * PostList-v3.x versions of the Symonfy/Yaml package use more recent versions of YAML spec, which breaks common
+ * Post-v3.x versions of the Symonfy/Yaml package use more recent versions of YAML spec, which breaks common
  * implementations of our version file format. To maintain compatibility, this class will pre-process YAML
  * contents from these files to work with Symfony/Yaml 4.0+.
  *

@@ -7,7 +7,7 @@ class Post extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name' => 'Blog PostList Dummy Component',
+            'name' => 'Blog Post Dummy Component',
             'description' => 'Displays a blog post.'
         ];
     }

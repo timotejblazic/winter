@@ -15,7 +15,7 @@ class CreateFactory extends BaseScaffoldCommand
     protected $signature = 'create:factory
         {plugin : The name of the plugin. <info>(eg: Winter.Blog)</info>}
         {factory : The name of the factory to generate. <info>(eg: PostFactory)</info>}
-        {--m|model= : The name of the model. <info>(eg: PostList)</info>}
+        {--m|model= : The name of the model. <info>(eg: Post)</info>}
         {--f|force : Overwrite existing files with generated files.}
 
         {--uninspiring : Disable inspirational quotes}

@@ -21,8 +21,8 @@ class Categories extends ComponentBase
     public function posts()
     {
         return [
-            ['title' => 'Lorum ipsum', 'content' => 'PostList Content #1'],
-            ['title' => 'La Playa Nudista', 'content' => 'Second PostList Content']
+            ['title' => 'Lorum ipsum', 'content' => 'Post Content #1'],
+            ['title' => 'La Playa Nudista', 'content' => 'Second Post Content']
         ];
     }
 

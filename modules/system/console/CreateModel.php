@@ -15,7 +15,7 @@ class CreateModel extends BaseScaffoldCommand
      */
     protected $signature = 'create:model
         {plugin : The name of the plugin. <info>(eg: Winter.Blog)</info>}
-        {model : The name of the model to generate. <info>(eg: PostList)</info>}
+        {model : The name of the model to generate. <info>(eg: Post)</info>}
         {--f|force : Overwrite existing files with generated files.}
 
         {--a|all : Generate a controller, migration, & seeder for the model}

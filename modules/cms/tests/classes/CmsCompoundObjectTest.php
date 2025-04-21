@@ -39,7 +39,7 @@ class CmsCompoundObjectTest extends TestCase
         Model::clearBootedModels();
         Model::flushEventListeners();
         include_once base_path() . '/modules/system/tests/fixtures/plugins/winter/tester/components/Archive.php';
-        include_once base_path() . '/modules/system/tests/fixtures/plugins/winter/tester/components/PostList.php';
+        include_once base_path() . '/modules/system/tests/fixtures/plugins/winter/tester/components/Post.php';
     }
 
     public function testLoadFile()
