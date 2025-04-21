@@ -21,6 +21,11 @@ columns:
         label: 'tb.catalog::lang.models.brand.label'
         relation: brand
         select: title
+    categories:
+        label: 'tb.catalog::lang.models.category.label'
+        relation: categories
+        select: title
+        invisible: true
     created_at:
         label: 'tb.catalog::lang.models.general.created_at'
         type: datetime

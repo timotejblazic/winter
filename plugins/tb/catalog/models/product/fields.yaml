@@ -20,8 +20,14 @@ fields:
         type: relation
         nameFrom: title
         emptyOption: '-'
+    categories:
+        label: 'tb.catalog::lang.models.category.label'
+        span: auto
+        type: relation
+        select: title
     pictures:
         label: 'tb.catalog::lang.models.general.pictures'
+        span: auto
         type: mediafinder
         mode: image
         prompt: 'Select an image'

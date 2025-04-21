@@ -13,7 +13,10 @@ class Category extends Model
 
     protected $fillable = ['title', 'slug', 'description', 'parent_id'];
 
-    public $rules = [];
+    public $rules = [
+        'title' => 'required',
+        'slug' => 'required|unique:tb_catalog_categories,slug',
+    ];
 
     protected $dates = [
         'created_at',
