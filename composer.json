@@ -43,7 +43,8 @@
         "laravel/framework": "^9.1",
         "wikimedia/composer-merge-plugin": "~2.1.0",
 
-        "tb/catalog": "dev-main"
+        "tb/catalog": "dev-main",
+        "winter/wn-user-plugin": "^2.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5.8",
