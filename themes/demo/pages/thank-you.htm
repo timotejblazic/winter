@@ -2,8 +2,10 @@ title = "Thank You"
 url   = "/thank-you/:id"
 layout = "default"
 
+[thankYou]
+orderIdParam = "id"
 ==
 <div class="container">
-    <h2>Thank You for your order!</h2>
-    <p>Your order  has been received.</p>
+    {% component 'thankYou' %}
 </div>
+
