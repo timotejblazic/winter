@@ -20,6 +20,7 @@ function onStart()
             <ul class="nav navbar-nav">
                 <li class="separator hidden-xs"></li>
                 <li class="{% if this.page.id == 'account' %}active{% endif %}"><a href="{{ 'account'|page }}">Account</a></li>
+                <li class="{% if this.page.id == 'my-orders' %}active{% endif %}"><a href="{{ 'my-orders'|page }}">My orders</a></li>
                 <li class="{% if this.page.id == 'products' %}active{% endif %}"><a href="{{ 'products'|page }}">Products</a></li>
                 <li class="{% if this.page.id == 'cartsummary' %}active{% endif %}"><a href="{{ 'cartsummary'|page }}">Cart Summary</a></li>
                 <li class="{% if this.page.id == 'cart' %}active{% endif %}"><a href="{{ 'cart'|page }}">Cart</a></li>
