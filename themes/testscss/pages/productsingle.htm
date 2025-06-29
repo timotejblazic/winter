@@ -1,0 +1,13 @@
+title = "Product single"
+url = "/product/:slug"
+layout = "default"
+description = "Page for showing detailed information about the specific product."
+is_hidden = 0
+
+[productSingle]
+slugParam = "slug"
+
+[addToCart]
+variantIdParam = "variantId"
+==
+{% component 'productSingle' %}

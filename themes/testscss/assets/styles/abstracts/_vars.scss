@@ -1,0 +1,115 @@
+@use 'functions' as *;
+@use 'sass:meta';
+
+$breakpoints: (
+    'xs': 576px,
+    'sm': 640px,
+    'md': 768px,
+    'lg': 1024px,
+    'xl': 1376px,
+    'xxl': 1600px,
+);
+
+$containers: (
+    'sm': 800px,
+    'default': 1152px,
+    'lg': 1376px,
+    'xl': 1600px,
+);
+
+$font-families: (
+    'primary': ('Inter', sans-serif),
+    'mono': (ui-monospace, monospace),
+);
+
+$line-heights: (
+    'primary': 1.66,
+    'headings': 1.35,
+    'titles': 1.1,
+);
+
+$colors: (
+    'gray': #E5E7EB,
+    'primary': (
+        'default': #64748B,
+        'dark': #16181E,
+        'light': #CCC,
+    ),
+    'accent': (
+        'default': #0055CC,
+        'dark': #0040A1,
+        'light': #597EB3,
+        'bright': #f2f8ff,
+    ),
+    'muted': (
+        'default': #f8f8f8,
+        'dark': #f1f1f1,
+    ),
+);
+
+$radius: (
+    'sm': 2px,
+    'default': 0,
+    'md': 8px,
+    'lg': 16px,
+    'xl': 24px
+);
+
+$gaps: (
+    'col-default': (
+        'default': 16px,
+        'lg': 32px
+    ),
+    'row-default': (
+        'default': 32px,
+        'lg': 48px,
+    )
+);
+
+$form: (
+    'field-height': (
+        'default': 44px,
+        'lg': 52px,
+        '4k': 3.25rem,
+    )
+);
+
+$heights: (
+    'header': (
+        'default': 75px,
+        'hamburger': 58px,
+    ),
+);
+
+
+@mixin vars($map, $attribute, $valueCallback: false, $prefix: '') {
+    @each $key, $value in $map {
+        @if meta.type-of($value) == 'map' {
+            @include vars($value, $attribute, $valueCallback, $key);
+        } @else {
+            $name: if($prefix == '', #{$attribute}, #{$attribute}-#{$prefix});
+            $nameFull: if($prefix == '', #{$attribute}-#{$key}, #{$attribute}-#{$prefix}-#{$key});
+
+            @if ($valueCallback != false) {
+                $value: #{call(get-function($valueCallback), $value)};
+            }
+
+            @if ($key == 'default') {
+                --#{$name}: #{$value};
+            } @else {
+                --#{$nameFull}: #{$value};
+            }
+        }
+    }
+}
+
+:root {
+    @include vars($colors, 'color');
+    @include vars($containers, 'container');
+    @include vars($radius, 'radius');
+    @include vars($font-families, 'ff');
+    @include vars($gaps, 'gap');
+    @include vars($line-heights, 'line-height');
+    @include vars($form, 'form');
+    @include vars($heights, 'height');
+}

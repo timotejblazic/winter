@@ -1,0 +1,35 @@
+==
+function onStart()
+{
+    $this['backendUrl'] = Backend::url('/');
+}
+==
+<nav id="layout-nav" role="navigation">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__left">
+                <a class="header__left__logo" href="{{ 'home'|page }}">Plugin Demo</a>
+
+                <button id="hamburger-button" type="button" class="header__left__hamburger">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="header__right">
+                <div class="menu">
+                    <div class="menu__item{{ this.page.id == 'account' ? ' active' }}"><a class="menu__link" href="{{ 'account'|page }}">Account</a></div>
+                    <div class="menu__item{{ this.page.id == 'my-orders' ? ' active' }}"><a class="menu__link" href="{{ 'my-orders'|page }}">My orders</a></div>
+                    <div class="menu__item{{ this.page.id == 'home' ? ' active' }}"><a class="menu__link" href="{{ 'home'|page }}">Products</a></div>
+                    <div class="menu__item{{ this.page.id == 'cartsummary' ? ' active' }}"><a class="menu__link" href="{{ 'cartsummary'|page }}">Cart Summary</a></div>
+                    <div class="menu__item{{ this.page.id == 'cart' ? ' active' }}"><a class="menu__link" href="{{ 'cart'|page }}">Cart</a></div>
+                    <div class="menu__item"><a class="menu__link" href="{{ backendUrl }}">Backend</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+

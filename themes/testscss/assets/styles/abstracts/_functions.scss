@@ -1,0 +1,21 @@
+@use 'sass:math';
+
+@function asset($type, $file) {
+    @return url('../../../assets/' + $type + '/' + $file);
+}
+
+@function asset-image($file) {
+    @return asset('images', $file);
+}
+
+@function stripUnit($value) {
+    @return math.div($value, $value * 0 + 1);
+}
+
+@function rem($pxValue) {
+    @return #{math.div(stripUnit($pxValue), 16)+rem};
+}
+
+@function color($name) {
+    @return 'var(--color-#{$name})';
+}

@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+.basket-offscreen {
+    background: aqua;
+    position: fixed;
+    top: var(--height-header);
+    left: 0;
+    width: 500px;
+}

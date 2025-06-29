@@ -1,0 +1,5 @@
+name: 'Test SCSS'
+description: 'Custom theme applied with SCSS'
+author: 'Timotej Blažič'
+homepage: 'http://winter.test/'
+code: testscss

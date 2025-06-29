@@ -1,0 +1,88 @@
+@use '../abstracts' as *;
+
+.product-single {
+    &__details {
+        @include md {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__media {
+        position: relative;
+        margin-bottom: 24px;
+        @include md {
+            margin-bottom: 0;
+        }
+        &__picture {
+            background: var(--color-muted-dark);
+            @include aspect-ratio(1, 1);
+        }
+
+        &__image {
+            object-fit: cover;
+        }
+
+        .badge {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__content {
+        @include md {
+            padding-left: 42px;
+        }
+    }
+
+    &__checkout {
+        margin-top: 24px;
+        padding: 16px 32px;
+        background: var(--color-muted);
+
+        &__buy {
+            display: flex;
+            input {
+                height: auto;
+                width: 82px;
+                padding: 0 12px;
+                text-align: center;
+            }
+        }
+    }
+
+    &__variants {
+        &__item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__prices {
+        &__item {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            &--current {
+                font-size: rem(28);
+                font-weight: 700;
+            }
+
+            &--full {
+                font-weight: 400;
+            }
+        }
+    }
+
+    &__attributes, &__categories {
+        margin-top: 32px;
+        @include md {
+            margin-top: 64px;
+        }
+    }
+}

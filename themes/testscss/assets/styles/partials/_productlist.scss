@@ -1,0 +1,93 @@
+@use '../abstracts' as *;
+
+.product-list {
+    &__filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 24px;
+
+        .form__item {
+            width: calc(50% - 13px);
+            @include xs {
+                width: calc(20% - 13px);
+            }
+
+            &:last-child {
+                width: 100%;
+                @include xs {
+                    width: calc(20% - 13px);
+                }
+            }
+        }
+    }
+
+    &__products {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 32px 16px;
+        @include xs {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include sm {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include lg {
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 32px;
+        }
+    }
+
+    &__empty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 32px;
+        min-height: 200px;
+        font-size: rem(28);
+        color: var(--color-primary-dark);
+        background: var(--color-accent-bright);
+        grid-column: 1 / 5;
+        @include xs {
+            padding: 80px;
+        }
+    }
+
+    &__pagination {
+        margin-top: 32px;
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            list-style-type: none;
+
+            li {
+                * {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    width: 36px;
+                    height: 36px;
+                    font-size: rem(18);
+                    background: #FFF;
+                    border: 1px solid var(--color-accent);
+                }
+
+                a {
+                    &:hover {
+                        background: var(--color-accent);
+                        color: #FFF;
+                    }
+                }
+
+                &.active {
+                    * {
+                        background: var(--color-accent);
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+}
