@@ -242,3 +242,13 @@
     height: $size;
     border-radius: 50%;
 }
+
+@mixin svg-color($color) {
+    [stroke]:not([stroke="none"]) {
+        stroke: $color;
+    }
+    
+    [fill]:not([fill="none"]) {
+        fill: $color;
+    }
+}

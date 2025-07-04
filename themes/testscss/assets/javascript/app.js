@@ -1,13 +1,12 @@
-jQuery(document).ready(function($){
+jQuery(document).ready(function ($) {
     hamburgerMenu();
     variantSelector();
+    basketSummary();
 
-    let event = new Event('customEv');
-    console.log(Snowboard.trigger(event));
 
-    // console.log(Snowboard.request(null, 'onMyCustom'));
 
-    function hamburgerMenu() {
+    function hamburgerMenu()
+    {
         const hamburgerBtn = $('#hamburger-button');
         const hamburgerMenu = $('.header__right');
 
@@ -17,7 +16,8 @@ jQuery(document).ready(function($){
         });
     }
 
-    function variantSelector() {
+    function variantSelector()
+    {
         const variants = $('#variant-items > div > input');
         const prices = $('#variant-prices > div');
 
@@ -29,7 +29,18 @@ jQuery(document).ready(function($){
         });
     }
 
-    function openBasketSummary() {
+    function basketSummary()
+    {
+        $('#add-to-cart-form').on('ajaxDone', function () {
+            $('#offscreen-basket-summary').addClass('active');
+        });
 
+        $('#basket-summary-open-button').on('click', function () {
+            $('#offscreen-basket-summary').addClass('active');
+        });
+
+        $('#offscreen-basket-summary-close, #basket-summary-close').on('click', function () {
+            $('#offscreen-basket-summary').removeClass('active');
+        });
     }
 });

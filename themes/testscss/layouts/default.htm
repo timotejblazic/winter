@@ -38,8 +38,10 @@ security = "all"
         {% partial 'site/footer' %}
     </footer>
 
-    <div class="basket-offscreen">
+    <div class="basket-offscreen" id="offscreen-basket-summary">
         {% component 'cartSummary' %}
+
+        <button class="basket-offscreen__close" id="offscreen-basket-summary-close">X</button>
     </div>
 
     <script type="text/javascript" src="{{ 'assets/javascript/app.js' | theme }}"></script>

@@ -1,21 +1,44 @@
 @use '../abstracts' as *;
 
 .basket-offscreen {
-    display: none;
     background: #FFF;
     position: fixed;
     top: 0;
-    right: 100px;
+    right: 0;
     width: 420px;
     box-shadow: var(--shadow-md);
     z-index: 100;
+    transform: translateX(110%);
+    @include transition(300ms);
+    &.active {
+        transform: none;
+    }
+    
+    &__close {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--color-accent);
+        color: #FFF;
+        font-weight: 700;
+        
+        &:hover {
+            color: #FFF;
+            background: var(--color-accent-dark);
+        }
+    }
 }
 
 .basket-summary {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    padding: 24px 16px;
+    padding: 42px 16px 24px;
 
     &__inner {
         overflow-y: auto;
