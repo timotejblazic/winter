@@ -1,0 +1,48 @@
+@use '../abstracts' as *;
+
+.order-details {
+    &__general {
+        margin-bottom: 32px;
+    }
+    
+    &__address {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        margin-bottom: 32px;
+    }
+    
+    &__items {
+        margin-bottom: 32px;
+        table {
+            tbody {
+                tr {
+                    td {
+                        &:first-child {
+                            min-width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    &__item {
+        display: flex;
+        align-items: center;
+        
+        &__media {
+            max-width: 80px;
+            width: 100%;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+    }
+    
+    &__total {
+        font-size: rem(24);
+        @include md {
+            font-size: rem(28);
+        }
+    }
+}

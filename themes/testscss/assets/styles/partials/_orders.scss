@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+.orders {
+    &__empty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 32px;
+        min-height: 200px;
+        font-size: rem(28);
+        color: var(--color-primary-dark);
+        background: var(--color-accent-bright);
+        @include xs {
+            padding: 80px;
+        }
+    }
+}

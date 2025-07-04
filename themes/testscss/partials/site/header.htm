@@ -19,12 +19,17 @@ function onStart()
 
             <div class="header__right">
                 <div class="menu">
-                    <div class="menu__item{{ this.page.id == 'account' ? ' active' }}"><a class="menu__link" href="{{ 'account'|page }}">Account</a></div>
                     <div class="menu__item{{ this.page.id == 'my-orders' ? ' active' }}"><a class="menu__link" href="{{ 'my-orders'|page }}">My orders</a></div>
                     <div class="menu__item{{ this.page.id == 'home' ? ' active' }}"><a class="menu__link" href="{{ 'home'|page }}">Products</a></div>
                     <div class="menu__item{{ this.page.id == 'cartsummary' ? ' active' }}"><a class="menu__link" href="{{ 'cartsummary'|page }}">Cart Summary</a></div>
                     <div class="menu__item{{ this.page.id == 'cart' ? ' active' }}"><a class="menu__link" href="{{ 'cart'|page }}">Cart</a></div>
                     <div class="menu__item"><a class="menu__link" href="{{ backendUrl }}">Backend</a></div>
+
+                    {% if user %}
+                        <div class="menu__item"><a class="menu__link" href="javascript:;" data-request="onLogout" data-request-data="redirect: '/'">Sign Out</a></div>
+                    {% else %}
+                        <div class="menu__item{{ this.page.id == 'account' ? ' active' }}"><a class="menu__link" href="{{ 'account'|page }}">Sign In</a></div>
+                    {% endif %}
                 </div>
             </div>
         </div>

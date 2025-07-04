@@ -30,6 +30,10 @@ $line-heights: (
 
 $colors: (
     'gray': #E5E7EB,
+    'red': (
+        'default': #c70000,
+        'light': #f51111,
+    ),
     'primary': (
         'default': #64748B,
         'dark': #16181E,
@@ -81,6 +85,15 @@ $heights: (
     ),
 );
 
+$shadows: (
+    //'sm': 0 1px 2px 0 rgb(0, 0, 0, 0.05),
+    'default': (0 1px 3px 0 rgb(0, 0, 0, 0.1), 0 1px 2px -1px rgb(0, 0, 0, 0.1)),
+    'md': 0 0 32px rgba(0, 0, 0, 0.16),
+    //'lg': 0 0 48px rgba(0, 0, 0, 0.12),
+    //'xl': 0 4px 48px rgba(0, 0, 0, 0.25),
+);
+
+
 
 @mixin vars($map, $attribute, $valueCallback: false, $prefix: '') {
     @each $key, $value in $map {
@@ -112,4 +125,5 @@ $heights: (
     @include vars($line-heights, 'line-height');
     @include vars($form, 'form');
     @include vars($heights, 'height');
+    @include vars($shadows, 'shadow');
 }
