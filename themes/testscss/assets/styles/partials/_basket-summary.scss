@@ -5,7 +5,8 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 420px;
+    max-width: 420px;
+    width: 100%;
     box-shadow: var(--shadow-md);
     z-index: 100;
     transform: translateX(110%);
@@ -91,6 +92,7 @@
         justify-content: space-between;
         padding-top: 16px;
         margin-top: auto;
+        gap: 16px;
     }
     
     &__empty {

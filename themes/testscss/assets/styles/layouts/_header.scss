@@ -109,7 +109,10 @@
 
                 &.active {
                     .menu__link {
-                        color: #FFF;
+                        color: var(--color-accent);
+                        @include lg {
+                            color: #FFF;
+                        }
                     }
                 }
             }
@@ -130,7 +133,10 @@
                 }
                 
                 &--icon {
-                    @include svg-color(var(--color-primary-light));
+                    @include svg-color(var(--color-primary-dark));
+                    @include lg {
+                        @include svg-color(var(--color-primary-light));
+                    }
                     
                     &:hover {
                         @include svg-color(#FFF);
