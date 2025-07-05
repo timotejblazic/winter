@@ -18,6 +18,7 @@
 
     &__media {
         margin-bottom: 8px;
+        border-bottom: 1px solid var(--color-primary-light);
         &__picture {
             background: var(--color-muted-dark);
             @include aspect-ratio(1, 1);

@@ -1884,6 +1884,7 @@ input[type=radio]:checked:before {
 }
 .product__media {
   margin-bottom: 8px;
+  border-bottom: 1px solid var(--color-primary-light);
 }
 .product__media__picture {
   background: var(--color-muted-dark);
@@ -1938,6 +1939,7 @@ input[type=radio]:checked:before {
 .product-single__media {
   position: relative;
   margin-bottom: 24px;
+  border: 1px solid var(--color-primary-light);
 }
 @media screen and (min-width: 768px) {
   .product-single__media {
