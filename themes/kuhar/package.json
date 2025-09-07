@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "sass": "^1.92.0"
+  },
+  "scripts": {
+    "watch:scss": "sass --watch assets\\styles\\custom.scss assets\\styles\\css\\custom.css"
+  }
+}

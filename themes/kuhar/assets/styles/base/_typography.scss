@@ -1,0 +1,688 @@
+@use '../abstracts' as *;
+
+html {
+    @include full-hd {
+        font-size: rem(17);
+    }
+    @include full-2k {
+        font-size: rem(18);
+    }
+    @include full-3k {
+        font-size: rem(20);
+    }
+    @include full-4k {
+        font-size: rem(23);
+    }
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 1rem;
+    color: var(--color-primary);
+    background-color: #FFF;
+    line-height: var(--line-height-primary);
+
+    &.loading *:not(.offscreen) {
+        transition: none !important;
+    }
+}
+
+p, ul, ol, figure, table, blockquote, iframe, video,
+.table-container,
+.layout__columns,
+.layout__container {
+    margin-bottom: 16px;
+    @include full-hd {
+        margin-bottom: 1rem;
+    }
+
+    + h1, + h2, + .h1, + .h2 {
+        margin-top: 32px;
+        @include md {
+            margin-top: 48px;
+        }
+        @include full-hd {
+            margin-top: 3rem;
+        }
+    }
+
+    + h3, + h4, + .h3, + .h4 {
+        margin-top: 24px;
+        @include md {
+            margin-top: 40px;
+        }
+        @include full-hd {
+            margin-top: 2.5rem;
+        }
+    }
+
+    + h5, + h6, + .h5, + .h6 {
+        margin-top: 16px;
+        @include md {
+            margin-top: 32px;
+        }
+        @include full-hd {
+            margin-top: 1rem;
+        }
+    }
+}
+
+* > {
+    p, ul, ol, figure, table, blockquote, iframe, video,
+    .table-container,
+    .layout__columns,
+    .layout__container {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+figure {
+    margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.42em;
+}
+
+h1, h2,
+.h1, .h2 {
+    line-height: var(--line-height-titles);
+}
+
+h3, h4, h5, h6,
+.h3, .h4, .h5, .h6 {
+    line-height: var(--line-height-headings);
+}
+
+h1, .h1 {
+    font-size: rem(32);
+    @include md {
+        font-size: rem(56);
+    }
+}
+
+h2, .h2 {
+    font-size: rem(28);
+    @include md {
+        font-size: rem(48);
+    }
+}
+
+h3, .h3 {
+    font-size: rem(24);
+    @include md {
+        font-size: rem(32);
+    }
+}
+
+h4, .h4 {
+    font-size: rem(20);
+    @include md {
+        font-size: rem(24);
+    }
+}
+
+h5, .h5 {
+    font-size: rem(18);
+    @include md {
+        font-size: rem(20);
+    }
+}
+
+.mb-xl {
+    margin-bottom: 0.84em;
+}
+
+a, button {
+    transition: .2s ease;
+    color: var(--color-accent);
+    background-color: inherit;
+
+    &:hover {
+        color: var(--color-accent-dark);
+    }
+}
+
+//a {
+//    &:not([class]):not([href="#"]):not([href="javascript:;"]) {
+//        text-decoration: underline;
+//    }
+//}
+
+.lead {
+    margin-bottom: 24px;
+    font-size: rem(18);
+    @include xs {
+        font-size: rem(20);
+    }
+    @include md {
+        font-size: rem(24);
+    }
+}
+
+small, .small {
+    font-size: rem(14);
+}
+
+.alert {
+    padding: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: var(--color-black);
+    background: var(--color-muted);
+    border-radius: var(--radius);
+    @include md {
+        padding: 32px;
+    }
+    @include full-hd {
+        padding: 2rem;
+    }
+
+    &--danger {
+        background: var(--color-red);
+        color: #FFFFFF;
+
+        *:not([class*="button"]) {
+            color: #FFFFFF;
+        }
+    }
+
+    &--exposed {
+        background: var(--color-accent);
+        color: #FFFFFF;
+
+        *:not([class*="button"]) {
+            color: #FFFFFF;
+        }
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+blockquote, .blockquote {
+    padding: 24px 40px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: rem(20);
+    font-style: italic;
+    border-left: 4px solid var(--color-accent);
+    @include full-hd{
+        padding: 1.5rem 2.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+hr {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    border-color: 1px solid var(--color-primary-bright);
+    width: 100%;
+    @include md {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    @include full-hd {
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+ul, ol {
+    margin-left: 18px;
+    list-style-position: outside;
+    @include full-hd{
+        margin-left: 1.125rem;
+    }
+    &:not([class]) li {
+        margin-bottom: 8px;
+        @include full-hd{
+            margin-bottom: 0.5rem;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        li {
+            margin-bottom: 4px;
+            @include full-hd{
+                margin-bottom: 0.25rem;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    ul, ol {
+        margin-left: 24px;
+        @include full-hd{
+            margin-left: 1.5rem;
+        }
+    }
+}
+
+ul {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    list-style-type: disc;
+    @include full-hd{
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    &:not([style]):not([class]) {
+        list-style-type: none;
+        margin-left: 0;
+        list-style-position: inside;
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            @include full-hd{
+                padding-left: 1.5rem;
+            }
+
+            &::before {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 8px;
+                height: 2px;
+                margin-top: 0.7em;
+                background: var(--color-accent);
+                content: '';
+                @include full-hd{
+                    width: 0.5rem;
+                    height: 0.125rem;
+                }
+            }
+        }
+
+        ul, ol {
+            margin-left: 0;
+        }
+    }
+}
+
+ol {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    list-style-type: decimal;
+    @include full-hd{
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    &[style*="lower-alpha"] {
+        margin-left: 20px;
+        @include full-hd{
+            margin-left: 1.25rem;
+        }
+    }
+}
+
+table, .table {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-align: left;
+    table-layout: auto;
+    min-width: 100%;
+    @include full-hd{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    tr th,
+    tr td {
+        padding: 12px 16px;
+        color: var(--color-primary-dark);
+        font-weight: 500;
+        border-bottom: 1px solid var(--color-muted-dark);
+        background: #FFFFFF;
+        @include md {
+            font-size: rem(14);
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        @include full-hd{
+            font-size: 1rem;
+            padding: 0.75rem 1rem;
+        }
+    }
+
+    thead th {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-size: rem(16);
+        font-weight: 700;
+        color: var(--color-primary-light);
+        border-color: var(--color-muted);
+        white-space: nowrap;
+        @include full-hd{
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+
+    tbody {
+        tr:nth-child(even) td {
+            background: var(--color-muted);
+        }
+
+        td {
+            border-bottom-width: 1px;
+        }
+    }
+
+    tfoot {
+        text-align: left;
+
+        tr:last-child {
+            th, td {
+                border-top-width: 2px;
+                border-bottom-width: 2px;
+            }
+        }
+    }
+}
+
+.table {
+    &--default {
+        tbody tr:nth-child(even) td {
+            background: #FFFFFF;
+        }
+
+        tr th,
+        tr td {
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &--bordered {
+        margin-left: 0;
+        margin-right: 0;
+
+        thead th {
+            border-color: var(--color-primary-bright);
+        }
+
+        tr th,
+        tr td {
+            border-width: 1px;
+            border-color: var(--color-primary-bright);
+
+            &:first-child {
+                border-color: var(--color-primary-bright);
+            }
+        }
+    }
+
+    &--sticky {
+        tr th,
+        tr td {
+            &:first-child {
+                position: sticky;
+                left: 0;
+                @include md {
+                    position: static;
+                }
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 1px;
+                    background: var(--color-muted-dark);
+                    content: '';
+                    @include md {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__cell--exposed {
+        background: var(--color-primary-bright) !important;
+    }
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    min-width: 100%;
+    @include full-hd{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    table {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+time {
+    margin-top: 12px;
+    font-size: rem(14);
+    color: var(--color-primary-bright);
+    @include md {
+        color: var(--color-primary-bright);
+    }
+    @include full-hd{
+        margin-top: 0.75rem;
+    }
+}
+
+mark {
+    background: rgba(var(--color-accent), 0.2);
+}
+
+fieldset {
+    padding: 12px 16px;
+    border: 1px solid var(--color-muted);
+    margin-top: 48px;
+    margin-bottom: 48px;
+    @include md {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    @include full-hd{
+        padding: 0.75rem 1.5rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    legend {
+        margin-left: -8px;
+        margin-right: -8px;
+        padding-left: 8px;
+        padding-right: 8px;
+        background: #FFFFFF;
+        @include full-hd{
+            margin-left: -0.5rem;
+            margin-right: -0.5rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+    }
+}
+
+video {
+    max-width: 100%;
+    border-radius: var(--radius);
+}
+
+iframe:not(.instagram-media) {
+    max-width: 100%;
+    height: auto;
+}
+
+.iframe--fslightbox {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.iframe-container {
+    @include aspect-ratio(16, 9, true);
+
+    &--fslightbox {
+        width: 1280px;
+        max-width: 90vw;
+        @include mobile {
+            max-width: 100%;
+        }
+        @include full-hd{
+            width: 80%;
+        }
+    }
+
+    > iframe:not(.instagram-media) {
+        height: 100%;
+    }
+}
+
+.fr-video {
+    display: block;
+    @include aspect-ratio(16, 9);
+}
+
+.fr-fic {
+    margin-bottom: 16px;
+    @include full-hd{
+        margin-bottom: 1rem;
+    }
+
+    &.fr-fil {
+        float: left;
+        margin-right: 16px;
+        @include full-hd{
+            margin-right: 1rem;
+        }
+    }
+
+    &.fr-fir {
+        float: right;
+        margin-left: 16px;
+        @include full-hd{
+            margin-left: 1rem;
+        }
+    }
+}
+
+.fr-dii {
+    display: inline;
+}
+
+.fr-img-caption {
+    img {
+        width: 100%;
+    }
+
+    .fr-inner {
+        display: block;
+        position: relative;
+        margin-top: 12px;
+        width: 100%;
+        font-size: rem(14);
+        @include full-hd{
+            margin-top: 0.75rem;
+        }
+
+        &:after {
+            position: absolute;
+            display: block;
+            height: 1px;
+            margin-top: 12px;
+            width: 100%;
+            background: var(--color-primary-bright);
+            content: '';
+            @include full-hd{
+                margin-top: 0.75rem;
+            }
+        }
+    }
+}
+
+.image--exposed {
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    @include md {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+    @include full-hd{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .fr-img-wrap,
+    .fr-inner {
+        display: block;
+    }
+}
+
+.content__thumbnail {
+    display: inline-block;
+}
+
+.image--thumbnail {
+    object-fit: cover;
+    width: 128px;
+    height: 128px;
+    border-width: 2px;
+    border-color: var(--color-primary-bright);
+    @include full-hd{
+        width: 144px;
+        height: 144px;
+    }
+    @include full-4k{
+        width: 164px;
+        height: 164px;
+    }
+}
+
+.image--full {
+    width: 100% !important;
+    height: auto !important;
+}
+
+picture {
+    display: block;
+}
+
+img[src*="data:image/svg+xml"]:not(.w-initial) {
+    width: 100%;
+}
+
+figcaption {
+    margin-top: 8px;
+    color: var(--color-primary);
+    @include full-hd{
+        margin-top: 0.5rem;
+    }
+}
+

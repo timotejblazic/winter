@@ -1,2 +1,4 @@
 static-pages:
     home: {  }
+    contact:
+        contact-contact-subpage: {  }

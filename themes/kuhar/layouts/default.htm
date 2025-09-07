@@ -1,10 +1,19 @@
-description = "This is the default layout"
+description = "Default layout"
+
+[staticPage]
+useContent = 1
+default = 0
+
+[staticMenu]
+code = "main-menu"
+
+[staticBreadcrumbs]
 ==
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Winter CMS - {{ this.page.title }}</title>
+    <title>{{ staticPage.title }}</title>
     <meta name="description" content="{{ this.page.meta_description }}">
     <meta name="title" content="{{ this.page.meta_title }}">
     <meta name="author" content="Winter CMS">
@@ -13,6 +22,7 @@ description = "This is the default layout"
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="{{ 'assets/images/favicon.png'|theme }}">
     <link rel="stylesheet" href="{{ 'assets/styles/css/custom.css' | theme }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     {% styles %}
 </head>
@@ -24,6 +34,8 @@ description = "This is the default layout"
 
 <main id="layout-main" class="main">
     <div class="container">
+        {% component 'staticBreadcrumbs' %}
+
         {% page %}
     </div>
 </main>
@@ -31,12 +43,6 @@ description = "This is the default layout"
 <footer id="layout-footer" class="footer">
     {% partial 'site/footer' %}
 </footer>
-
-<div class="basket-offscreen" id="offscreen-basket-summary">
-    {% component 'cartSummary' %}
-
-    <button class="basket-offscreen__close" id="offscreen-basket-summary-close">X</button>
-</div>
 
 <script type="text/javascript" src="{{ 'assets/javascript/app.js' | theme }}"></script>
 {% snowboard all %}

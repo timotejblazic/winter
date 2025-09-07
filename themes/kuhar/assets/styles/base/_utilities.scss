@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+:root {
+    --maxViewportWidth: 3840px;
+}
+
+.sr-only {
+    @include sr-only();
+}

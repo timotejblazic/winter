@@ -1,0 +1,17 @@
+{% for item in items | filter(item => not item.viewBag.isHidden) %}
+    <div class="menu__item{{ item.isActive ? ' active' : '' }}{{ item.isChildActive ? ' child-active' : '' }}{{ item.viewBag.cssClass ? ' ' ~ item.viewBag.cssClass }}">
+        {% if item.url %}
+            <a class="menu__link" href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}>
+                {{ item.title }}
+            </a>
+        {% else %}
+            <span class="menu__link">{{ item.title }}</span>
+        {% endif %}
+
+        {% if item.items %}
+            <div class="menu__item__submenu">
+                {% partial __SELF__ ~ "::items" items=item.items %}
+            </div>
+        {% endif %}
+    </div>
+{% endfor %}
