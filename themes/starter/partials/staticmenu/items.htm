@@ -1,5 +1,5 @@
 {% for item in items | filter(item => not item.viewBag.isHidden) %}
-    <div class="menu__item{{ item.isActive ? ' active' : '' }}{{ item.isChildActive ? ' child-active' : '' }}{{ item.viewBag.cssClass ? ' ' ~ item.viewBag.cssClass }}">
+    <div class="menu__item{{ item.isActive ? ' active' : '' }}{{ item.isChildActive ? ' child-active' : '' }}{{ item.viewBag.cssClass ? ' ' ~ item.viewBag.cssClass }}{{ item.viewBag.isExposed ? ' menu__item--exposed' }}">
         {% if item.url %}
             <a class="menu__link" href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}>
                 {{ item.title }}

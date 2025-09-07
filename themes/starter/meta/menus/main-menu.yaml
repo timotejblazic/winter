@@ -1,35 +1,42 @@
 items:
     -
         title: Home
-        nesting: 0
-        type: static-page
+        nesting: false
+        type: url
+        url: /
         code: ''
-        reference: home
-        replace: 0
+        reference: null
+        cmsPage: null
+        replace: false
         viewBag:
             isHidden: '0'
+            is_exposed: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: Contact
         nesting: 0
         type: static-page
-        url: null
         code: ''
         reference: contact
-        cmsPage: null
         replace: 0
         viewBag:
             isHidden: '0'
+            isExposed: '1'
             cssClass: ''
             isExternal: '0'
     -
         title: Backend
+        nesting: false
         type: url
         url: /backend
         code: ''
+        reference: null
+        cmsPage: null
+        replace: false
         viewBag:
             isHidden: '0'
+            is_exposed: '1'
             cssClass: ''
             isExternal: '0'
 name: 'Main menu'
