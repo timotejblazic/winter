@@ -32,6 +32,10 @@
         {
             "type": "git",
             "url": "git@github.com:timotejblazic/wn-catalog-plugin.git"
+        },
+        {
+            "type": "git",
+            "url": "git@github.com:timotejblazic/wn-basics-plugin.git"
         }
     ],
     "require": {
@@ -44,6 +48,7 @@
         "wikimedia/composer-merge-plugin": "~2.1.0",
 
         "tb/catalog": "dev-main",
+        "tb/basics": "dev-main",
         "winter/wn-user-plugin": "^2.2",
         "stripe/stripe-php": "^17.3",
         "winter/wn-location-plugin": "^2.1",
