@@ -1,0 +1,15 @@
+{% set data = __SELF__.data %}
+
+<div class="features">
+    <div class="features__header">
+        {{ data.title }}
+    </div>
+
+    <div class="features__items">
+        {% for item in data.items %}
+            <div class="features__item">
+                <h4 class="features__item__title">{{ item.title }}</h4>
+            </div>
+        {% endfor %}
+    </div>
+</div>
